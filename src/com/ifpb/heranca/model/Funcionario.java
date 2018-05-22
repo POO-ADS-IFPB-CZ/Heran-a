@@ -2,7 +2,7 @@ package com.ifpb.heranca.model;
 
 import java.time.LocalDate;
 
-public class Funcionario extends Pessoa {
+public abstract class Funcionario extends Pessoa {
 
     private float salario;
 
