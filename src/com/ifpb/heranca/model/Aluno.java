@@ -2,46 +2,18 @@ package com.ifpb.heranca.model;
 
 import java.time.LocalDate;
 
-public class Aluno {
+public class Aluno extends Pessoa{
 
-    private String cpf;
-    private String nome;
-    private LocalDate nascimento;
     private int matricula;
     private float nota1;
     private float nota2;
 
-    public Aluno(String cpf, String nome, LocalDate nascimento, int matricula, float nota1, float nota2) {
-        this.cpf = cpf;
-        this.nome = nome;
-        this.nascimento = nascimento;
+    public Aluno(String cpf, String nome, LocalDate nascimento, int matricula,
+                 float nota1, float nota2) {
+        super(cpf,nome,nascimento);
         this.matricula = matricula;
         this.nota1 = nota1;
         this.nota2 = nota2;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public LocalDate getNascimento() {
-        return nascimento;
-    }
-
-    public void setNascimento(LocalDate nascimento) {
-        this.nascimento = nascimento;
     }
 
     public int getMatricula() {
