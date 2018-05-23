@@ -29,4 +29,15 @@ public class Professor extends Funcionario {
     public void setDisciplina(String disciplina) {
         this.disciplina = disciplina;
     }
+
+    @Override
+    public void imprimirObjeto() {
+        System.out.println("Nome: "+getNome());
+        System.out.println("CPF: "+getCpf());
+        System.out.println("Nascimento: "+getNascimento());
+        System.out.println("Salário: "+getSalario());
+        System.out.println("Matrícula: "+matricula);
+        System.out.println("Disciplina: "+disciplina);
+    }
+
 }

@@ -37,4 +37,7 @@ public abstract class Pessoa {
     public void setNascimento(LocalDate nascimento) {
         this.nascimento = nascimento;
     }
+
+    public abstract void imprimirObjeto();
+
 }

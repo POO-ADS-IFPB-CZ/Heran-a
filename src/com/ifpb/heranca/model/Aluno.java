@@ -39,4 +39,15 @@ public class Aluno extends Pessoa{
     public void setNota2(float nota2) {
         this.nota2 = nota2;
     }
+
+    @Override
+    public void imprimirObjeto(){
+        System.out.println("Nome: "+getNome());
+        System.out.println("CPF: "+getCpf());
+        System.out.println("Nascimento: "+getNascimento());
+        System.out.println("Matrícula: "+matricula);
+        System.out.println("Nota1: "+nota1);
+        System.out.println("Nota2: "+nota2);
+    }
+
 }
