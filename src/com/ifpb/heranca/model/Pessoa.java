@@ -1,6 +1,7 @@
 package com.ifpb.heranca.model;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public abstract class Pessoa {
 
@@ -40,4 +41,28 @@ public abstract class Pessoa {
 
     public abstract void imprimirObjeto();
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Pessoa)) return false;
+        Pessoa pessoa = (Pessoa) o;
+        return Objects.equals(getCpf(), pessoa.getCpf()) &&
+                Objects.equals(getNome(), pessoa.getNome()) &&
+                Objects.equals(getNascimento(), pessoa.getNascimento());
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "cpf='" + cpf + '\'' +
+                ", nome='" + nome + '\'' +
+                ", nascimento=" + nascimento +
+                '}';
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(getCpf(), getNome(), getNascimento());
+    }
 }
